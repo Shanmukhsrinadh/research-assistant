@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Research Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN for the magnifying glass icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mini Research Assistant</h1>
+        </header>
+
+        <main>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search for research...">
+                <button onclick="submitSearch()">
+                    <i class="fas fa-search"></i> 
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Google</p>
+        </footer>
+    </div>
+
+    <script>
+        function submitSearch() {
+            const searchQuery = document.getElementById('search-input').value;
+            if (searchQuery) {
+                window.location.href = `results.html?q=${encodeURIComponent(searchQuery)}`;
+            }
+        }
+    </script>
+</body>
+</html>

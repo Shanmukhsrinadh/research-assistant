@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <script async src="https://cse.google.com/cse.js?cx=13bf05910a88e4fa7"></script>
+</head>
+<body style="background-color:rgb(7, 7, 7);">
+    <div class="gcse-searchresults-only"></div> 
+
+    <script>
+        // Automatically trigger search query based on URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q');
+        if (query) {
+            // Set the search query dynamically
+            const gcseElement = document.querySelector('.gcse-searchresults-only');
+            gcseElement.setAttribute('data-query', query);
+        }
+    </script>
+</body>
+</html>
