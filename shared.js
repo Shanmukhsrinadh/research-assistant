@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 {
                     method: 'POST',
                     headers: {
-                        'Authorization': 'Bearer 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',
+                        'Authorization': 'Bearer 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',
                         'HTTP-Referer': 'https://www.sitename.com',
                         'X-Title': 'SiteName',
                         'Content-Type': 'application/json',
